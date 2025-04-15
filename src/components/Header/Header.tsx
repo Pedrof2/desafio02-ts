@@ -1,9 +1,16 @@
 import './Header.css'
+import { Text } from "@chakra-ui/react"
 
-export const Header  = () => {
+interface HeaderProps {
+  text: string;
+}
+export const Header  = ({text} : HeaderProps) => {
+
   return(
+    <>
     <div className='header'>
-      Dio Bank
+    <Text fontSize='3x1'> {text}</Text>
     </div>
+    </>
   )
 }
